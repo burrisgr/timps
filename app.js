@@ -27,7 +27,7 @@ function appendComment(event) {
     event.preventDefault();
     // If the value is nothing just return
     if (commentInput.value.length < 1) return;
-    else if (authorInput.value.length < 1) return;
+    if (authorInput.value.length < 1) return;
 
     // Insert new template into DOM
     template(data);
