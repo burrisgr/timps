@@ -1,6 +1,8 @@
 const submit = document.querySelector('.comment-submit');
 const commentList = document.querySelector('.comments');
 const commentInput = document.querySelector('.comment-input');
+const authorList = document.querySelector('.authors');
+const authorInput = document.querySelector('.author-input');
 
 function template(data) {
     commentList.insertAdjacentHTML("beforeend", `
@@ -19,17 +21,19 @@ function appendComment(event) {
     const data = {
         avatar: "./assets/commentavatar.jpg",
         comment: commentInput.value,
-        author: "Greg Burris"
+        author: authorInput.value,
     };
 
     event.preventDefault();
     // If the value is nothing just return
     if (commentInput.value.length < 1) return;
+    else if (authorInput.value.length < 1) return;
 
     // Insert new template into DOM
     template(data);
 
     // Reset textrea value
+    authorInput.value = "";
     commentInput.value = "";
 
     // Save the list to localStorage
