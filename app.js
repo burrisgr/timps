@@ -21,7 +21,7 @@ function appendComment(event) {
     const data = {
         avatar: "./assets/commentavatar.jpg",
         comment: commentInput.value,
-        author: authorInput.value,
+        author: authorInput.value
     };
 
     event.preventDefault();
