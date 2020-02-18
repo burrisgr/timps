@@ -17,7 +17,7 @@ function template(data) {
 function appendComment(event) {
 
     const data = {
-        avatar: "/assets/commentavatar.jpg",
+        avatar: "./assets/commentavatar.jpg",
         comment: commentInput.value,
         author: "Greg Burris"
     };
